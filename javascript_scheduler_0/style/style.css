@@ -1,2 +1,23 @@
 ﻿body {
+    font-family: 'Helvetica Neue LT Pro', Arial, sans-serif;
+    background: #00ffff;
+}
+
+.table {
+    width: 50%;
+    background: #0094ff;
+    margin: auto;
+    clear: both;
+
+}
+
+.cell {
+    font-family: 'Helvetica Neue LT Pro' Arial sans-serif;
+}
+
+.control {
+    height: 50px;
+    width: 100px;
+    background: #0094ff;
+    margin: auto;
 }

@@ -8,22 +8,32 @@
     <script src="scripts/main.js"></script>
 </head>
 <body onload="loadTable();">
-    <table border="1" id="schedTable">
-        <tr>
-            <th></th>
-            <th>Sunday</th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-        </tr>
-    </table>
-    <form>
-        <textarea id="textArea" rows="2" cols="20"></textarea>
-        <input id="btnSubmit" type="button" onclick="insertData();" value="Submit" />
-        <input id="btnClear" type="button"   onclick="clearTable();" value="Clear table" />
-    </form>
+    <div id="main">
+        <h1>Month Planner</h1>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Click the cell that you wish to update.</li>
+            <li>Enter your text into the textbox.</li>
+            <li>Press Submit to enter data.</li>
+            <li>Clear table will remove all information.</li>
+        </ol>
+        <table border="1" id="schedTable" class="table">
+            <tr>
+                <th></th>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+        </table>
+        <form>
+            <textarea id="textArea" rows="2" cols="20"></textarea>
+            <input id="btnSubmit" type="button" onclick="insertData();" class="control" value="Submit" />
+            <input id="btnClear" type="button" onclick="clearTable();"class="control" value="Clear table" />
+        </form>
+    </div>
 </body>
 </html>

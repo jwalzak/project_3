@@ -41,7 +41,7 @@ function seletedCell(ref) {
     data = ref.id;
 
     if (lastCell != null) {
-        lastCell.style.backgroundColor = "White";
+        lastCell.style.backgroundColor = "#0094ff";
     }
     ref.style.backgroundColor = "#DDD";
     
@@ -73,10 +73,11 @@ function insertData() {
 //this will create the table based on the length of the object arrays weekArray and daysArray
 function loadTable() {
     //Table creation
+   
     for (var i = 0; i < cellData.weekArray.length; i++) {
         document.getElementById("schedTable").innerHTML += "<tr id=row" + i + "><td>Week " + (i + 1) + "</td>";
         for (var j = 0; j < cellData.daysArray.length; j++) {
-            document.getElementById('row' + i).innerHTML += '<td id="' + (i + "_" + j) + '"onclick="seletedCell(this);">Data</td>';
+            document.getElementById('row' + i).innerHTML += '<td id="' + (i + "_" + j) + '"onclick="seletedCell(this);" class="cell">Data</td>';
         }
     }
 
