@@ -1,18 +1,21 @@
 ﻿body {
     font-family: 'Helvetica Neue LT Pro', Arial, sans-serif;
     background: #00ffff;
+    background-image: url('../images/ship-wreck-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
 }
 
 .table {
     width: 50%;
     background: #0094ff;
-    margin: auto;
     clear: both;
 
 }
 
 .cell {
     font-family: 'Helvetica Neue LT Pro' Arial sans-serif;
+    height: 50px;
 }
 
 .control {

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE HTML>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="javascript_scheduler_0.index" %>
+
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>JavaScript Scheduler</title>
@@ -22,13 +24,13 @@
         <table border="1" id="schedTable" class="table">
             <tr>
                 <th></th>
-                <th>Sunday</th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-                <th>Saturday</th>
+                <th class="cell">Sunday</th>
+                 <th class="cell">Monday</th>
+                 <th class="cell">Tuesday</th>
+                 <th class="cell">Wednesday</th>
+                 <th class="cell">Thursday</th>
+                 <th class="cell">Friday</th>
+                 <th class="cell">Saturday</th>
             </tr>
         </table>
         <form>

@@ -5,6 +5,12 @@ var cellDataString;
 var elIdText = "";
 //Create an object to hold the data and reference the id of table elements
 
+///////////////////////////////////////////////////////////////////////
+//NOTE: The application does not seem to save in Internet Explorer.  //
+//      It may be a setting of my Inernet Explorer.                  //
+//      It will save in Google Chrome.                               //
+///////////////////////////////////////////////////////////////////////
+
 
 //Create an object filled with arrays.
 var cellData = {
@@ -103,13 +109,56 @@ function loadTable() {
         var insert = storageArray[i];
         var tempArray = insert.split("-");
         console.log(tempArray);
-        alert(tempArray[0]);
-        alert(typeof tempArray);
         document.getElementById(tempArray[0]).innerHTML = tempArray[1];
     }
 
 }//end loadTable
 
+//Determine if the computer is connected
+window.addEventListener("online", function () {
+    document.getElementById("statud").innerHTML = "Online";
+});
+
+window.addEventListener("offline", function(){
+    document.getElementById("status").innerHTML = "Offline";
+});
+
+//AJAXcall
+function callAJAX(requestMethod, clientRequest) {
+    var pageMethod = hostPage + requestMethod;
+
+    var test = JSON.stringify({ request: clientRequest });
+
+    $.ajax({
+        url: pageMethod,
+        data: JSON.stringify({ request: clientRequest }),
+        type: "POST",
+        contentType: "application/JSON",
+        dataType: "JSON",
+        timeout: 60000,
+        success: function (result) {
+            ajaxCallback(result.d);
+        },
+        error: function (xhr, status) {
+            alert(status + "-" + xhr.responseText);
+        }
+    });
+}
+
+//AJAXcallback
+function ajaxCallback(serverResponse) {
+    if (serverResponse !== saveData) {
+        var newData = JSON.parse(serverResponse);
+
+    }
+    else ("Data Saved");
+}
+
+//Send JSON string to server
+function saveData() {
+    var json = JSON.stringify(elIdText);
+    callAJAX("saveData", json);
+}
 
 
 
@@ -131,6 +180,7 @@ function clearTable() {
     for (var i = 0; i < cellData.weekArray.length; i++) {
         for (var j = 0; j < cellData.daysArray.length; j++) {
             document.getElementById(i + "_" + j).innerHTML = "";
+            localStorage.removeItem("data");
         }
     }
 }//End clearTable();
