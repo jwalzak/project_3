@@ -1,3 +1,3 @@
-# project_3
-School project for localstorage. the user will click on a cell in the table and be able to change the data in it. 
-When they click submit the information will be kept in localstorage for the next time they load the page.
+# Task Calendar
+This was a project for school. It is a calendar, and when you click the cell on the table you are able to enter tasks or anything you want to be saved to local storage.
+If you are browsing the page through file explorer it will show if you are connected to the internet.
