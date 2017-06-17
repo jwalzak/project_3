@@ -1,0 +1,80 @@
+$green: #468966;
+$sand: #FFF0A5;
+$orange: #FFB03B;
+$dark-orange: #B64926;
+$red-orange: #8E2800;
+$white: #fff;
+$font-google: 'Roboto Slab', 'Crete Round', 'Josefin Slab';
+$table-font: 'Crete Round', sans-serif;
+
+body {
+  font-family: $font-google;
+  background:  $green;
+}
+
+h1 {
+  text-align: center;
+  color: $sand;
+
+}
+
+.main {
+  width: 45%;
+  float: left;
+  background: $green;
+  color: $sand;
+
+}
+
+.con-tbl {
+  width: 45%;
+  float: right;
+}
+
+.table {
+  font-family: $table-font;
+}
+
+.spn {
+  color: $red-orange;
+  font-weight: bold;
+}
+
+th {
+  width: 100px;
+  height: 25px;
+  text-align: center;
+}
+
+th, td {
+  border-bottom: 2px solid $orange;
+  background: $dark-orange;
+}
+
+.table {
+  width: 100%;
+}
+
+.control {
+  padding: 10px 24px;
+  background: $white;
+  border: 2px solid $sand;
+  color: $green;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+.control:hover {
+  background-color: $green;
+  color: $white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.text-a {
+  margin-bottom: 10px;
+  display: block;
+  width: 400px;
+  border: 2px solid $sand;
+  font-family: Tahoma, sans-serif;
+}
