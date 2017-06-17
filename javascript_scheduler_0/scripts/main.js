@@ -38,19 +38,19 @@ cellData.weekArray[3] = "Week 4";
 
 
 //This function will select the cell id
-//To show that the cell has been chosen 
+//To show that the cell has been chosen
 //the cell will change colour.
 function seletedCell(ref) {
-   
+
     //Get the id of the selected cell
     //place it into a variable
     data = ref.id;
 
     if (lastCell != null) {
-        lastCell.style.backgroundColor = "#0094ff";
+        lastCell.style.backgroundColor = "#FFF0A5";
     }
-    ref.style.backgroundColor = "#DDD";
-    
+    ref.style.backgroundColor = "#FFB03B";
+
     lastCell = ref;
 }
 
@@ -79,7 +79,7 @@ function insertData() {
 //this will create the table based on the length of the object arrays weekArray and daysArray
 function loadTable() {
     //Table creation
-   
+
     for (var i = 0; i < cellData.weekArray.length; i++) {
         document.getElementById("schedTable").innerHTML += "<tr id=row" + i + "><td>Week " + (i + 1) + "</td>";
         for (var j = 0; j < cellData.daysArray.length; j++) {
@@ -89,7 +89,7 @@ function loadTable() {
 
     var storageJSON = localStorage.getItem("data");
     var storage = JSON.parse(storageJSON);
-    
+
     //alert(typeof storage);
 
     //Use jQuery to change the returned object into an array
