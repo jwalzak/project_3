@@ -4,7 +4,7 @@ var lastCell = null;
 var cellDataString;
 var elIdText = "";
 //Create an object to hold the data and reference the id of table elements
-//Test comment
+
 ///////////////////////////////////////////////////////////////////////
 //NOTE: The application does not seem to save in Internet Explorer.  //
 //      It may be a setting of my Inernet Explorer.                  //
